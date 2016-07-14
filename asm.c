@@ -3,7 +3,7 @@
 #include <string.h>
 
 typedef struct {
-	uint32_t Flg, Imm;
+	uint32_t Imm;
 	uint8_t Pre, Opc, Mod, Reg, Rm, Sca, Ind, Bas;
 } Insn;
 
@@ -16,7 +16,6 @@ int main(){
 	memset(&Instruction, 0x00, sizeof(Insn));
 	uint8_t Size = DiAsm(Raw, &Instruction);
 	printf("Size: %x\n" // 0x07
-		   "Flg : %x\n" // 0x00
 		   "Imm : %x\n" // 0x1234
 		   "Pre : %x\n" // 0x00
 		   "Opc : %x\n" // 0x01
@@ -26,6 +25,6 @@ int main(){
 		   "Sca : %x\n" // 0x03
 		   "Ind : %x\n" // 0x00
 		   "Bas : %x\n" // 0x05
-		   , Size, Instruction.Flg, Instruction.Imm, Instruction.Pre, Instruction.Opc, Instruction.Mod, Instruction.Reg, Instruction.Rm, Instruction.Sca, Instruction.Ind, Instruction.Bas);
+		   , Size, Instruction.Imm, Instruction.Pre, Instruction.Opc, Instruction.Mod, Instruction.Reg, Instruction.Rm, Instruction.Sca, Instruction.Ind, Instruction.Bas);
 	return 0;
 }
