@@ -8,6 +8,6 @@ Note.
 
 Source used :
 http://www.sandpile.org/
-https://github.com/notnanocat/ssde
+https://github.com/TheServer201/ssde
 http://wiki.osdev.org/X86-64_Instruction_Encoding
 https://github.com/AmrThabet/x86Emulator/tree/master/hde28c
